@@ -1,23 +1,23 @@
 <p align="center"><a href="https://github.com/thecoder-001/MineColab"><img src="https://github.com/thecoder-001/MineColab/blob/master/Logo.png" alt="Logo" height="80"/></a></p>
 <h1 align="center">MineColab</h1>
-<p align="center">在Google Colab上开我的世界服务器(JE)</p>
+<p align="center">在 Google Colab 上开我的世界服务器(JE)</p>
 <a href="https://colab.research.google.com/github/thecoder-001/MineColab/blob/master/MineColab.ipynb" target="_parent"><img align="right" src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
 
-## :hear_no_evil:  首先，什么是Google Colab?
-正如官方常见问题解答所言，Colab是Google Research的一款产品。Colab允许任何人通过浏览器编写和执行任意的Python代码，尤其适合机器学习、数据分析和...。从技术上讲，Colab是一个托管的Jupyter笔记本电脑服务，不需要设置就可以使用，同时提供免费访问包括GPU在内的计算资源。简而言之，它是一个用于学习、运行python代码、机器学习或通用目的的虚拟机。
+## :hear_no_evil:  首先，什么是 Google Colab?
+正如官方常见问题解答所言，Colab 是 Google Research 的一款产品。Colab 允许任何人通过浏览器编写和执行任意的 Python 代码，尤其适合机器学习、数据分析和...。从技术上讲，Colab 是一个托管的 Jupyter Notebook 服务，不需要设置就可以使用，同时提供免费访问包括GPU在内的计算资源。简而言之，它是一个用于学习、运行 Python 代码、机器学习或通用目的的虚拟机。
 ## :moneybag:  真的*免费*吗
-是的，Colab可以免费使用。但在我看来，有几点是应该牢记:
-1. **colab是免费的**，但至少不应该不分皂白地利用它。人们应该重视它是一种免费提供的资源，它可能会被耗尽或者限制。
-2. 如果不是很明显，就不应该在上面运行关键任务服务(比如大型和重要的服务器/数据库/python程序)。它的资源不是有保证的，也不是无限的，使用会有一定限制。此外，Notebook的最大运行时间为12小时，超过12小时后，应手动重新启动。
-3. 如果你需要经常使用它来完成密集的任务，可以考虑购买一台VPS服务器。服务器负载的大幅增加将迫使Google关闭这个可以*白嫖*的服务。
+是的，Colab *目前*可以免费使用。但在我看来，有几点是应该牢记:
+1. **colab 是免费的**，但至少不应该不分皂白地利用它。人们应该重视它是一种免费提供的资源，它可能会被耗尽或者限制。
+2. 如果不是很明显，就不应该在上面运行关键任务服务(比如大型和重要的服务器/数据库/Python程序)。它的资源不是有保证的，也不是无限的，使用会有一定限制。此外，Notebook 的最大运行时间为12小时，超过12小时后，应手动重新启动。
+3. 如果你需要经常使用它来完成密集的任务，可以考虑购买一台VPS服务器。服务器负载的大幅增加将迫使 Google 关闭这个可以*白嫖*的服务。
 
 最后，这只是我个人的意见，可以忽略。问问你的心什么是对的，什么是错的。此外，请尽量将其作为**偶尔**使用的资源，而不是24小时不间断地使用，以便其他人也可以利用免费资源。(不要白嫖过度....)
 
 ## :page_with_curl: 食用指南
-1. 在google colab中打开笔记本(.ipynb).
-3. 读一读笔记本，大部分是可以明白的。按需运行。
+1. 在 Colab 中打开笔记本(.ipynb).
+3. 读一读笔记本，大部分是可以看明白的。按需运行。
 4. 运行第一个单元格。
-5. 你有三个选择. 你可以使用 ngrok, playit.gg 和 cloudflare 的 argo. Ngrok很容易安装,不需要安装任何客户端,但它往往是很不可靠的. Argo没有这样的限制，但使用比较复杂(其实还行。) Playit.gg的实现目前还没有完善(调试日志垃圾)，但提供了方便的静态子域。
+5. 你有三个选择. 你可以使用 Ngrok, Playit.gg 和 Cloudflare 的 Argo(Cloudflared). Ngrok 很容易安装,不需要安装任何客户端,但它往往是很不可靠的. Argo没有这样的限制，但使用比较复杂(其实还行。) Playit.gg 的实现目前还没有完善(调试日志垃圾)，但提供了方便的静态子域。
   * Ngrok:
     Change `tunnel_service` variable and follow the prompts.
   * Cloudflare argo:

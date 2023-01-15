@@ -1,24 +1,23 @@
 <p align="center"><a href="https://github.com/thecoder-001/MineColab"><img src="https://github.com/thecoder-001/MineColab/blob/master/Logo.png" alt="Logo" height="80"/></a></p>
 <h1 align="center">MineColab</h1>
-<p align="center">Run Minecraft Server on Google Colab</p>
+<p align="center">在Google Colab上开我的世界服务器(JE)</p>
 <a href="https://colab.research.google.com/github/thecoder-001/MineColab/blob/master/MineColab.ipynb" target="_parent"><img align="right" src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
 
-## :hear_no_evil:  First of all, what is google Colab?
-As the official FAQ says, colaboratory, or “Colab” for short, is a product from Google Research. Colab allows anybody to write and execute arbitrary python code through the browser, and is especially well suited to machine learning, data analysis and education. More technically, Colab is a hosted Jupyter notebook service that requires no setup to use, while providing free access to computing resources including GPUs.
-In short, it is a vm provided for learning, running python code, machine learning or for general purpose.
-## :moneybag:  Is it really free to use?
-Yes, Colab is free to use. But there are some points which, according to me one should keep in mind:
-1. Though colab is a free service, it shouldn't be exploited indiscriminately or without any care. One should value that its a resource offered for no cost and can get depleted/restricted if the demand increases out of control.
-2. If it isn't obvious, one shouldn't run mission-critical services (like large and important servers/databases/python programs) on it. Its resources are not guaranteed and not unlimited, and the usage limits sometimes fluctuate. Also, the notebook has a maximum runtime of 12 hours, after which, it should be manually restarted.
-3. If you need to use it pretty often for intensive tasks, consider purchasing a vps server. A heavy increase in server load would force google to close the service.
+## :hear_no_evil:  首先，什么是Google Colab?
+正如官方常见问题解答所言，Colab是Google Research的一款产品。Colab允许任何人通过浏览器编写和执行任意的Python代码，尤其适合机器学习、数据分析和...。从技术上讲，Colab是一个托管的Jupyter笔记本电脑服务，不需要设置就可以使用，同时提供免费访问包括GPU在内的计算资源。简而言之，它是一个用于学习、运行python代码、机器学习或通用目的的虚拟机。
+## :moneybag:  真的*免费*吗
+是的，Colab可以免费使用。但在我看来，有几点是应该牢记:
+1. **colab是免费的**，但至少不应该不分皂白地利用它。人们应该重视它是一种免费提供的资源，它可能会被耗尽或者限制。
+2. 如果不是很明显，就不应该在上面运行关键任务服务(比如大型和重要的服务器/数据库/python程序)。它的资源不是有保证的，也不是无限的，使用会有一定限制。此外，Notebook的最大运行时间为12小时，超过12小时后，应手动重新启动。
+3. 如果你需要经常使用它来完成密集的任务，可以考虑购买一台VPS服务器。服务器负载的大幅增加将迫使Google关闭这个可以*白嫖*的服务。
 
-In the end, it is just my personal opinion and can be ignored safely. Just ask your heart whats right and whats wrong. Also, please try to use it as a once in a while resource and not 24x7 so that others can avail the free resources too.
+最后，这只是我个人的意见，可以忽略。问问你的心什么是对的，什么是错的。此外，请尽量将其作为**偶尔**使用的资源，而不是24小时不间断地使用，以便其他人也可以利用免费资源。(不要白嫖过度....)
 
-## :page_with_curl: Instructions
-1. Open the notebook in google colab.
-3. Read through the notebook, most of the code is self explanatory. Run the cells which are useful for your use-case.
-4. Run the first cell which runs the Minecraft server.
-5. Now you have three options. You can either use ngrok, playit.gg or cloudflare's argo. Ngrok is easy to setup and doesn't requires anything to be installed by the clients but it can often be quite unreliable. Argo doesn't have such limitations but requires a bit more work. Playit.gg's implementation is unpolished at the moment (debug log spam) but offers convenient static subdomains.
+## :page_with_curl: 食用指南
+1. 在google colab中打开笔记本(.ipynb).
+3. 读一读笔记本，大部分是可以明白的。按需运行。
+4. 运行第一个单元格。
+5. 你有三个选择. 你可以使用 ngrok, playit.gg 和 cloudflare 的 argo. Ngrok很容易安装,不需要安装任何客户端,但它往往是很不可靠的. Argo没有这样的限制，但使用比较复杂(其实还行。) Playit.gg的实现目前还没有完善(调试日志垃圾)，但提供了方便的静态子域。
   * Ngrok:
     Change `tunnel_service` variable and follow the prompts.
   * Cloudflare argo:
@@ -29,7 +28,7 @@ In the end, it is just my personal opinion and can be ignored safely. Just ask y
   * Playit.gg:
     Change `tunnel_service` variable, ignore the debug output _(todo:fix)_ and follow the prompts.
 
-## :zap:  So, how does it actually work?
+## :zap:  它到底是如何工作的呢?
 As Google Colab is a VM running Ubuntu server as base OS, it can be easily used as a Minecraft server. Here are the steps which the notebook performs to setup the server:
 1. Update the system's apt cache.
 2. Install Openjdk-16 (Java) through apt-get.
@@ -39,12 +38,12 @@ As Google Colab is a VM running Ubuntu server as base OS, it can be easily used 
 6. List/Print the file list on the screen to indicate succesful directory change.
 7. Startup the Minecraft server (with optimized JVM parameters from [Aikar's guide)](https://aikar.co/2018/07/02/tuning-the-jvm-g1gc-garbage-collector-flags-for-minecraft/)
 
-## 🐛 Found a bug?
+## 🐛 有BUG吗?
 Report report the bug by creating a new issue and use this helpful [issue template](https://github.com/thecoder-001/MineColab/issues/new?assignees=&labels=bug&template=bug_report.md&title=%5BBUG%5D).
 
 Or suggest a new feature using this [template](https://github.com/thecoder-001/MineColab/issues/new?assignees=&labels=enhancement&template=feature_request.md&title=%5BFeature+Request%5D).
 
-## 👍 Tips
+## 👍 歪比巴卜
 - If something does not work, try using a VPN like [windscribe](https://windscribe.com) before opening an issue.
 - Switch between the three different tunnel providers and see which works best for you.
 - Make regular backups of your world.

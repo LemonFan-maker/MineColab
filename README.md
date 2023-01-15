@@ -4,7 +4,7 @@
 <a href="https://colab.research.google.com/github/thecoder-001/MineColab/blob/master/MineColab.ipynb" target="_parent"><img align="right" src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
 
 ## :hear_no_evil:  首先，什么是 Google Colab?
-正如官方常见问题解答所言，Colab 是 Google Research 的一款产品。Colab 允许任何人通过浏览器编写和执行任意的 Python 代码，尤其适合机器学习、数据分析和...。从技术上讲，Colab 是一个托管的 Jupyter Notebook 服务，不需要设置就可以使用，同时提供免费访问包括GPU在内的计算资源。简而言之，它是一个用于学习、运行 Python 代码、机器学习或通用目的的虚拟机。
+正如官方常见问题解答所言，Colab 是 Google Research 的一款产品。Colab 允许任何人通过浏览器编写和执行任意的 Python 代码，尤其适合机器学习、数据分析和...。从技术上讲，Colab 是一个托管的 Jupyter Notebook 服务，不需要设置就可以使用，同时提供免费访问包括 GPU 在内的计算资源。简而言之，它是一个用于学习、运行 Python 代码、机器学习或通用目的的虚拟机。
 ## :moneybag:  真的*免费*吗
 是的，Colab *目前*可以免费使用。但在我看来，有几点是应该牢记:
 1. **colab 是免费的**，但至少不应该不分皂白地利用它。人们应该重视它是一种免费提供的资源，它可能会被耗尽或者限制。
@@ -29,9 +29,9 @@
     Change `tunnel_service` variable, ignore the debug output _(todo:fix)_ and follow the prompts.
 
 ## :zap:  它到底是如何工作的呢?
-As Google Colab is a VM running Ubuntu server as base OS, it can be easily used as a Minecraft server. Here are the steps which the notebook performs to setup the server:
-1. Update the system's apt cache.
-2. Install Openjdk-16 (Java) through apt-get.
+Google Colab 是一个 Ubuntu 虚拟机，它可以很容易地开启 Minecraft 服务器。下面是开服步骤:
+1. 更新 APT 缓存.
+2. 通过 apt-get 安装 OpenJDK-16(Java).
 3. Mount Google Drive to access the minecraft folder (Drive is used here to provide persistent storage).
 4. Setup Argo/ngrok/playit Tunnel (Opening a tunnel at port 25565) depending on the `tunnel_service` variable.
 5. Change directory to the minecraft-server folder on google drive ("Minecraft-server" is the default, located in the root directory of my Google Drive.)
